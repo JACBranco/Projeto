@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<div class="barra-superior" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+
+    <a th:href="@{/}" style="display: flex; position: absolute; top: 15px; left: 30px">
+        <img alt="logo" th:src="@{/Images/camaleao.jpg}" style="height: 80px">
+    </a>
+
+        <div th:if="${username} != null" class="items-barra-superior" style="width:300px; margin-right: auto; margin-left: 73px"><h3>Bem vindo
+            [[${username}]] !</h3></div>
+
+    <div onclick="myFunction()" class="menu"><img alt="menu" th:src="@{/Images/menu.png}" style="height: 80px">
+        <div id="menuDropdown" class="menu-content">
+            <a th:href="@{/}">Home</a>
+            <a href="#shop">Cart</a>
+            <a th:if="${username == null}" th:href="@{/loginForm}">Login</a>
+            <a th:if="${username != null}" th:href="@{/logout}">Logout</a>
+        </div>
+    </div>
+    <script>
+                /* When the users clicks on the button,
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                  document.getElementById("menuDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the users clicks outside
+                window.onclick = function(event) {
+                  if (!event.target.matches('.menu')) {
+                    var dropdowns = document.getElementsByClassName("menu-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+
+
+
+    </script>
+
+    <a th:href="@{/}" class="items-barra-superior" style="text-decoration: none"><h3> Home </h3></a>
+    <a th:href="@{/}" class="items-barra-superior" style="text-decoration: none"><h3> Botao </h3></a>
+    <a th:href="@{/}" class="items-barra-superior" style="text-decoration: none"><h3> Cart </h3>
+        <div style="width: 13px"></div>
+        <img alt="cart" th:src="@{/Images/cart.png}" style="height: 30px;"> </a>
+    <a th:if="${username} == null" th:href="@{/loginForm}" class="items-barra-superior" style="text-decoration: none"><h3> Login </h3></a>
+    <a th:if="${username} != null" th:href="@{/logout}" class="items-barra-superior" style="text-decoration: none"><h3> Logout </h3></a>
+
+</div>

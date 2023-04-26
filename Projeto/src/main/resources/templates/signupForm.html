@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="PT-pt" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Signup</title>
+</head>
+
+<body>
+
+<div class="container-fluid" style="display: flex; flex-direction: column; align-items: center;">
+
+    <div th:replace="~{barra_superior}"></div>
+
+    <div class="content-body-column" style="align-content: center;">
+
+        <img alt="background" th:src="@{/Images/background.jpg}" class="background" style="height: 100vh">
+
+        <br>
+
+        <div class="descricao-produto" style="padding-top: 40px; padding-bottom: 40px">
+            <div class="texto-cinzento"><h2 style="text-align:center">Enter the requested information:</h2></div>
+            <form th:action="@{/signup}" method="post" style="height: 100%; width: 100%; align-content: center; display: flex; flex-direction: column; justify-content: center; align-items: center">
+                <input type="text" id="name" name="name" placeholder="insert name" style="text-align: center; border-radius: 20px; height: 15%; width: 90%" required><br>
+                <input type="text" id="address" name="address" placeholder="insert address" style="text-align: center; border-radius: 20px; height: 15%; width: 90%" required><br>
+                <input type="text" id="username" name="username" placeholder="insert username" style="text-align: center; border-radius: 20px; height: 15%; width: 90%;" required><br>
+                <input type="password" id="password" name="password" placeholder="insert password" style="text-align: center; border-radius: 20px; height: 15%; width: 90%" required><br>
+                <input type="submit" id="signup" name="signup" value="Sign Up" style="cursor: pointer; height: 15%; width: 20%; min-width: 150px; border-radius: 20px;">
+            </form>
+        </div>
+        <div th:if="${not #strings.isEmpty(usernameMessage)}" th:utext="${usernameMessage}"></div>
+    </div>
+
+</div>
+</body>
+</html>

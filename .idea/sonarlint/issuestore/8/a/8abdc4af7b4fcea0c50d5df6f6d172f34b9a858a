@@ -1,0 +1,6 @@
+
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³—ºw8¾àÆÔ÷0
+t
+java:S4144,"WUpdate this method so that its implementation is not identical to "getUser" on line 36.(ˆ‹û‚8ÌäÆÕ÷0
+t
+java:S41440"WUpdate this method so that its implementation is not identical to "setUser" on line 40.(Ì„ç¬8ÌäÆÕ÷0

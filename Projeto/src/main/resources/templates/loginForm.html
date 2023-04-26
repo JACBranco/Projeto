@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="PT-pt" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{estilos.css}">
+    <title>Login</title>
+        <script th:replace="~{js/submitLoginForm.js}"></script>
+
+</head>
+
+<body>
+
+<div class="container-fluid" style="display: flex; flex-direction: column; align-items: center;">
+
+    <div th:replace="~{barra_superior}"></div>
+
+    <div class="content-body-column" style="align-content: center;">
+
+        <img alt="background" th:src="@{/Images/background.jpg}" class="background" style="height: 100vh">
+
+        <div class="descricao-produto">
+            <form id="loginForm" th:action="@{/authenticateTheUser}" method="post"
+                  style="height: 100%; width: 100%; align-content: center; display: flex; flex-direction: column; justify-content: center; align-items: center">
+                <input type="text" id="username" name="username" placeholder="insert username"
+                       style="text-align: center; border-radius: 20px; height: 15%; width: 90%;" required autofocus><br>
+                <input type="password" id="password" name="password" placeholder="insert password"
+                       style="text-align: center; border-radius: 20px; height: 15%; width: 90%" required><br>
+
+                <!--            <form enctype="application/json" th:action="@{/login}" id="submitLoginForm" method="post">-->
+                <!--                <input type="hidden" id="json" name="json">-->
+                <!--            </form>-->
+
+                <input type="submit" id="login" name="login" value="Login"
+                       style="cursor: pointer; height: 15%; width: 20%; min-width: 150px; border-radius: 20px;">
+            </form>
+        </div>
+
+        <div class="info-card" style="text-align: center;">
+            <br>
+            <h2 class="texto-cinzento" style="letter-spacing: -1px; word-spacing: 6px; ">NOT REGISTERED YET? SIGN UP <a
+                    th:href="@{/signupForm}" style="text-decoration: none"><h2
+                    class="texto-cinzento">HERE</h2></a></h2>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

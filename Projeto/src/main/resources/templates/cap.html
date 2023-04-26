@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="PT-pt" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{estilos.css}">
+    <title>Homepage</title>
+</head>
+
+<body>
+<div class="container-fluid" style="display: flex; flex-direction: column; align-items: center;">
+
+    <div th:replace="~{barra_superior}"></div>
+
+    <div class="content-body">
+
+        <img alt="background" th:src="@{/Images/background.jpg}" class="background">
+
+        <div class="card">
+            <img alt="sweater" th:src="@{Images/cap.png}" style="height: 230px; align-self: center; border-radius: 50px;">
+            <h2 class="texto-cinzento">CAP</h2>
+        </div>
+
+        <div class="descricao-produto">
+            <h2 class="texto-cinzento">CAP PERSONALIZADO</h2>
+            <h3 class="texto-cinzento"> PREÇO: --</h3>
+            <h4 class="texto-cinzento" style="letter-spacing: -1px; word-spacing: 6px"> PERSONALIZE O SEU CAP ESCOLHENDO A IMAGEM E TEXTO QUE PRETENDE UTILIZAR</h4>
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

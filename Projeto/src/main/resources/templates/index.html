@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="PT-pt" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+    <title>Homepage</title>
+</head>
+
+
+<body>
+
+<div class="container-fluid" style="display: flex; flex-direction: column; align-items: center;">
+
+    <div th:replace="~{barra_superior}"></div>
+
+    <div class="content-body">
+
+        <img alt="background" th:src="@{/Images/background.jpg}" class="background">
+
+        <a style="text-decoration: none" th:href="@{/tShirt}" class="card">
+            <img alt="t-shirt" th:src="@{/Images/tshirt2.jpg}" style="height: 230px; align-self: center; border-radius: 50px;">
+            <h2 class="texto-cinzento">T-SHIRT</h2>
+        </a>
+
+        <a style="text-decoration: none" th:href="@{/sweater}" class="card">
+            <img alt="sweater" th:src="@{Images/sweater.png}" style="height: 230px; align-self: center; border-radius: 50px;">
+            <h2 class="texto-cinzento">SWEATER</h2>
+        </a>
+
+        <a style="text-decoration: none" th:href="@{/hoodie}" class="card">
+            <img alt="hoodie" th:src="@{/Images/hoodie.png}" style="height: 230px; align-self: center; border-radius: 50px;">
+            <h2 class="texto-cinzento">HOODIE</h2>
+        </a>
+
+        <a style="text-decoration: none" th:href="@{/cap}" class="card">
+            <img alt="cap" th:src="@{/Images/cap.png}" style="height: 230px; align-self: center; border-radius: 50px;">
+            <h2 class="texto-cinzento">CAP</h2>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
