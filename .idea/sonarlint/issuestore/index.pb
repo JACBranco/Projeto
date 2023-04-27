@@ -63,3 +63,5 @@ y
 IProjeto/src/main/java/TestSecurity/Projeto/controllers/CapController.java,b\a\bac0273bd752d034842c0bfe66334a9fc9cb3926
 r
 BProjeto/src/main/java/TestSecurity/Projeto/ProjetoApplication.java,c\e\ce376e185cb17732e783d0dd4be1fe37c4b7e42c
+?
+Projeto/pom.xml,e\b\eb5ed87d963eb79fcfe1fb07cffd4c554fe04660
